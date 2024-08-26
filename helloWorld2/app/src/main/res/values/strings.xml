@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HelloWorld</string>
+    <string name="home_title">Hello, World!</string>
+    <string name="second_title">Second Screen</string>
+</resources>
