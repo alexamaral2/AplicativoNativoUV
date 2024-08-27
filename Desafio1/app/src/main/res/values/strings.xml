@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Desafio1</string>
+    <string name="second_title">Ver Mais</string>
+    <string name="news_toolbar">News</string>
+    <string name="first_news">
+        Existem muitas variações de trechos de Lorem Ipsum disponíveis, mas a maioria sofreu alguma forma de alteração, seja por humor inserido ou palavras aleatórias que não parecem minimamente plausíveis. Se você pretende usar um trecho de Lorem Ipsum, é necessário garantir que não haja nada constrangedor escondido no meio do texto. Todos os geradores de Lorem Ipsum na Internet tendem a repetir blocos pré-definidos conforme necessário, tornando este o primeiro gerador verdadeiro na Internet. Ele utiliza um dicionário com mais de 200 palavras em latim, combinado com algumas estruturas de frases modelo, para gerar Lorem Ipsum que parece razoável. O Lorem Ipsum gerado é, portanto, sempre livre de repetição, humor inserido ou palavras não características, etc.
+    </string>
+
+</resources>
