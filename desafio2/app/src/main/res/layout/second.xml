@@ -6,297 +6,309 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/my_label"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Resultado da Simulação"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+            android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/resultado_simulacao"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAlignment="center"
-            android:textSize="16sp" />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/my_label"
+                android:text="Resultado da Simulação"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/resultado_simulacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="center"
+                android:textSize="16sp"
+                android:layout_marginBottom="5dp" />
 
-        <TextView
-            android:id="@+id/result_total_yield"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rendimento Total de"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+            <TextView
+                android:id="@+id/rendimento_total"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rendimento Total de R$"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:layout_marginBottom="16dp" />
 
-        <TextView
-            android:id="@+id/rendimento_total"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_initial_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Valor Aplicado inicialmente"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_initial_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valor Aplicado inicialmente"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/valor_aplicado_inicialmente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/valor_aplicado_inicialmente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_gross_investment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Valor bruto do investimento"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_gross_investment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valor bruto do investimento"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/valor_bruto_investimento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/valor_bruto_investimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_yield_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Valor do Rendimento"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_yield_amount"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valor do Rendimento"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/valor_rendimento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/valor_rendimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_tax"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="IR sobre o investimento"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_tax"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IR sobre o investimento"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/ir_rendimento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/ir_rendimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_net_investment"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Valor líquido do Investimento"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_net_investment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Valor líquido do Investimento"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/valor_liquido_investimento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-        <TextView
-            android:id="@+id/valor_liquido_investimento"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+                <TextView
+                    android:id="@+id/result_rescue_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Data de Resgate"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/result_rescue_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Data de Resgate"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1" />
 
-        <TextView
-            android:id="@+id/data_resgate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="14sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/data_resgate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/result_days_passed"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Dias Corridos"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/result_days_passed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dias Corridos"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/dias_corridos"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/dias_corridos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/result_monthly_yield"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rendimento Mensal"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/result_monthly_yield"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rendimento Mensal"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/rendimento_mensal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/rendimento_mensal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/result_cdi_percentage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Percentual do CDI do investimento"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/result_cdi_percentage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Percentual do CDI do investimento"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/percentual_cdi"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/percentual_cdi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="8dp">
 
-        <TextView
-            android:id="@+id/result_annual_yield"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rentabilidade Anual"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/result_annual_yield"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rentabilidade Anual"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/rentabilidade_anual"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/rentabilidade_anual"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginBottom="20dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
 
-        <TextView
-            android:id="@+id/result_period_yield"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rentabilidade no período"
-            android:textSize="16sp"
-            android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/result_period_yield"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rentabilidade no período"
+                    android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/rentabilidade_periodo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="16sp" />
-    </LinearLayout>
+                <TextView
+                    android:id="@+id/rentabilidade_periodo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="14sp"
+                    android:layout_gravity="end" />
+            </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_firstscreen"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Simular Novamente" />
+            <Button
+                android:id="@+id/btn_firstscreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/ButtonSimulation"
+                android:text="Simular Novamente"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

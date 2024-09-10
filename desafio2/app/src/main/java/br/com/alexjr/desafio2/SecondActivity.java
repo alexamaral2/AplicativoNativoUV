@@ -37,9 +37,11 @@ public class SecondActivity extends AppCompatActivity {
         if (extras != null) {
             String dataVencimento = extras.getString("dateInput");
             double valorAplicacao = Double.parseDouble(extras.getString("valorAplicacao"));
-            double percentualCdi = Double.parseDouble(extras.getString("percentualCdi"));
+            double percentualCdi = Double.parseDouble(extras.getString("percentualCdi")) / 100;
 
-            double rendimentoTotal = (valorAplicacao * percentualCdi) / 100;
+            long diasCorridos = calcularDiasCorridos(dataVencimento);
+
+            double rendimentoTotal = (valorAplicacao * percentualCdi * diasCorridos) / 365;
 
             double valorBrutoInvestimento = valorAplicacao + rendimentoTotal;
 
@@ -47,7 +49,6 @@ public class SecondActivity extends AppCompatActivity {
 
             double valorLiquidoInvestimento = valorBrutoInvestimento - irRendimento;
 
-            long diasCorridos = calcularDiasCorridos(dataVencimento);
 
             double rendimentoMensal = rendimentoTotal / (diasCorridos / 30.0);
 
@@ -61,8 +62,8 @@ public class SecondActivity extends AppCompatActivity {
             textPercentualCdi.setText(percentualCdi + "%");
             textDataResgate.setText(dataVencimento);
 
-            textResultadoSimulacao.setText("R$ " + String.format("%.2f", valorLiquidoInvestimento));
-            textRendimentoTotal.setText("R$ " + String.format("%.2f", rendimentoTotal));
+            textResultadoSimulacao.setText("R$ " + String.format("%.2f", valorBrutoInvestimento));
+            textRendimentoTotal.setText("Rendimento Total de R$ " + String.format("%.2f", rendimentoTotal));
             textValorBrutoInvestimento.setText("R$ " + String.format("%.2f", valorBrutoInvestimento));
             textValorRendimento.setText("R$ " + String.format("%.2f", rendimentoTotal));
             textIrRendimento.setText("R$ " + String.format("%.2f", irRendimento));
@@ -89,7 +90,7 @@ public class SecondActivity extends AppCompatActivity {
             Date dataAtual = Calendar.getInstance().getTime();
             Date dataResgate = dateFormat.parse(dataVencimento);
             long diferencaMillis = dataResgate.getTime() - dataAtual.getTime();
-            return TimeUnit.DAYS.convert(diferencaMillis, TimeUnit.MILLISECONDS);
+            return Math.abs(TimeUnit.DAYS.convert(diferencaMillis, TimeUnit.MILLISECONDS));
         } catch (ParseException e) {
             e.printStackTrace();
         }
