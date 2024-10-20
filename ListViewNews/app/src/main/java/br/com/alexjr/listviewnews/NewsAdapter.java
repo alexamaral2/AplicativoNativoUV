@@ -1,6 +1,7 @@
 package br.com.alexjr.listviewnews;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,10 +28,23 @@ public class NewsAdapter extends ArrayAdapter<News> {
         ImageView imageView = convertView.findViewById(R.id.newsImage);
         TextView titleView = convertView.findViewById(R.id.newsTitle);
         TextView descriptionView = convertView.findViewById(R.id.newsDescription);
+        TextView dateView = convertView.findViewById(R.id.newsDate);
 
         imageView.setImageResource(news.getImageResId());
         titleView.setText(news.getTitle());
         descriptionView.setText(news.getDescription());
+        dateView.setText(news.getNewsDate());
+
+        convertView.setOnClickListener(v -> {
+            Intent intent = new Intent(getContext(), SecondActivity.class);
+            intent.putExtra("title", news.getTitle());
+            intent.putExtra("description", news.getDescription());
+            intent.putExtra("newsDate", news.getNewsDate());
+            intent.putExtra("imageResId", news.getImageResId());
+            intent.putExtra("fullText", news.getFullText());
+            intent.putExtra("author", news.getAuthor());
+            getContext().startActivity(intent);
+        });
 
         return convertView;
     }

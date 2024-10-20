@@ -1,35 +1,48 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="10dp">
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true">
+
+    <TextView
+        android:id="@+id/newsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#dd1b1a"        android:fontFamily="sans-serif-medium"
+        android:text="News Title"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/newsDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:fontFamily="sans-serif"
+        android:text="News Description"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:layout_marginTop="4dp" />
 
     <ImageView
         android:id="@+id/newsImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/ic_launcher_background"
         android:contentDescription="News Image"
-        android:layout_marginEnd="10dp" />
+        android:layout_marginTop="8dp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1">
-
-        <TextView
-            android:id="@+id/newsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:text="News Title" />
-
-        <TextView
-            android:id="@+id/newsDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:text="News Description" />
-    </LinearLayout>
+        android:text="20 Oct 2024"
+        android:textSize="12sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="4dp" />
 </LinearLayout>
