@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="?android:attr/selectableItemBackground"
+    android:gravity="center"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/produtoImagem"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        android:contentDescription="Imagem do Produto" />
+
+    <TextView
+        android:id="@+id/produtoNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#808080"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:maxLines="3"
+        android:ellipsize="end"
+        android:text="Produto" />
+
+    <TextView
+        android:id="@+id/produtoAvaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:textColor="#ffd049"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="0 estrelas" />
+
+    <TextView
+        android:id="@+id/produtoPreco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#0f86f7"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:text="R$ 0.0" />
+</LinearLayout>

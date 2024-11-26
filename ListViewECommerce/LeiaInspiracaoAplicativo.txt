@@ -1,0 +1,1 @@
+A construção do aplicativo foi feita com base no site do Magazine Luiza. Foi adotada uma estrutura e utilização de paleta de cores que fazem referência ao estilo da loja.
